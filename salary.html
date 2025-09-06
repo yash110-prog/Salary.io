@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Salary Breakdown — Salaryfy</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/images/logo.svg" alt="Salaryfy logo" class="logo">
+        <h1>Salaryfy</h1>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="salary.html">Salary Breakdown</a>
+        <a href="tax.html">Tax Info</a>
+        <a href="education.html">Education</a>
+        <a href="calculators.html">Calculators</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Salary Breakdown (Frontend only)</h2>
+      <p>Enter your annual gross salary and optionally custom percentages for components.</p>
+
+      <form id="salaryForm" class="form-grid">
+        <label>Annual Gross Salary (₹)
+          <input type="number" id="gross" value="600000" min="0" required>
+        </label>
+
+        <label>Basic (% of gross)
+          <input type="number" id="basicPct" value="40" min="0" max="100">
+        </label>
+
+        <label>HRA (% of basic)
+          <input type="number" id="hraPct" value="50" min="0" max="100">
+        </label>
+
+        <label>Other Allowances (annual ₹)
+          <input type="number" id="otherAllow" value="50000" min="0">
+        </label>
+
+        <label>PF Employee (% of basic)
+          <input type="number" id="pfPct" value="12" min="0" max="100">
+        </label>
+
+        <div style="grid-column:1/-1;text-align:right;">
+          <button type="button" id="computeSalary" class="btn">Compute</button>
+        </div>
+      </form>
+
+      <div id="salaryResult" class="result card" aria-live="polite" style="display:none;">
+        <h3>Breakdown</h3>
+        <table class="result-table">
+          <tbody id="breakdownBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; Salaryfy</p>
+    </div>
+  </footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>

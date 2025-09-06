@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calculators — Salaryfy</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/images/logo.svg" alt="Salaryfy logo" class="logo">
+        <h1>Salaryfy</h1>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="salary.html">Salary Breakdown</a>
+        <a href="tax.html">Tax Info</a>
+        <a href="education.html">Education</a>
+        <a href="calculators.html">Calculators</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Simple Tax Estimate</h2>
+      <label>Annual Taxable Income (₹)
+        <input id="taxIncome" type="number" value="600000" min="0">
+      </label>
+      <div style="margin-top:12px;">
+        <button id="estimateTax" class="btn">Estimate Tax</button>
+      </div>
+
+      <div id="taxEstimate" class="result card" style="display:none;margin-top:16px;">
+        <h3>Estimated Tax</h3>
+        <p id="taxValue">—</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; Salaryfy</p>
+    </div>
+  </footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
