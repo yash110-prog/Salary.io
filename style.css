@@ -1,0 +1,56 @@
+/* Basic modern responsive styles for Salaryfy */
+:root{
+  --blue:#2563EB;
+  --muted:#6b7280;
+  --bg:#f7f9fc;
+  --card:#ffffff;
+  --radius:12px;
+  --max:1100px;
+  --gap:18px;
+  font-family: Inter, Roboto, "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial;
+  color-scheme: light;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:#111}
+.container{max-width:var(--max);margin:0 auto;padding:20px}
+.site-header{background:var(--card);box-shadow:0 2px 8px rgba(16,24,40,0.04);position:sticky;top:0;z-index:20}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{width:40px;height:40px}
+.nav{display:flex;gap:12px;align-items:center}
+.nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px}
+.nav a:hover{background:rgba(37,99,235,0.08);color:var(--blue)}
+
+.hero{padding:48px 0;text-align:left}
+.hero h2{font-size:28px;margin:0 0 8px}
+.hero p{color:var(--muted);margin:0 0 16px}
+.hero-cta .btn{margin-right:10px}
+
+.card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(16,24,40,0.04);margin-bottom:18px}
+.card-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--gap)}
+.small{padding:12px}
+.features .card{min-height:140px}
+
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;align-items:end}
+.form-grid label{display:block}
+.form-grid input{width:100%;padding:10px;border:1px solid #e6e9ef;border-radius:8px}
+
+.btn{background:var(--blue);color:white;padding:10px 14px;border-radius:10px;border:none;cursor:pointer}
+.btn.outline{background:transparent;color:var(--blue);border:1px solid rgba(37,99,235,0.12)}
+.btn:active{transform:translateY(1px)}
+
+.result-table{width:100%;border-collapse:collapse}
+.result-table td{padding:8px;border-bottom:1px dashed #eee}
+
+.slab-table{width:100%;border-collapse:collapse;margin-top:12px}
+.slab-table th,.slab-table td{padding:8px;border:1px solid #f0f0f3;text-align:left}
+
+.site-footer{padding:18px 0;color:var(--muted);text-align:center}
+
+/* Responsive adjustments */
+@media (max-width:720px){
+  .header-inner{flex-direction:column;gap:10px;align-items:flex-start}
+  .nav{flex-wrap:wrap}
+  .hero h2{font-size:22px}
+}
